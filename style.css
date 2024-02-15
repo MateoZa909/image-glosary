@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --font-protest-guerrilla: 'Protest Guerrilla';
+    --font-lora: 'Lora';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-one {
+    background-image: url(/back.svg);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-one .boxes {
+    /* background-color: lightblue; */
+    width: 900px;
+    height: 500px;
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+/* .boxes .box {
+    border-radius: 8px;
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 1;
+} */
+
+.boxes .box {
+    transition: all 0.5s ease; /* Transición suave */
+    opacity: 1; /* Asegura que todas las cajas sean opacas por defecto */
+    width: auto; /* Restablece cualquier ancho fijo aplicado anteriormente */
+    height: auto; /* Restablece cualquier altura fija aplicada anteriormente */
+    position: relative; /* O restablece según sea necesario */
+    z-index: 1; /* Restablece el z-index si se modificó */
+    border-radius: 8px;
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    cursor: pointer;
+}
+
+/* Cuando cualquier caja está en hover, hace las demás cajas menos visibles */
+.boxes:hover .box:not(:hover) {
+    opacity: 0.1; /* Hace las demás cajas casi transparentes */
+}
+
+
+/* 
+.boxes .box:active {
+    transform: scale(.98);
+} */
+
+.one {
+    background-color: transparent;
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.one:active {
+    background-color: rgb(38, 0, 255);
+}
+.one h1 {
+    color: white;
+    font-size: 13px;
+    font-family: var(--font-lora);
+    letter-spacing: 2px;
+}
+.one img {
+    width: 120px;
+    height: 55px;
+}
+
+.two {
+    background-color: rgb(160, 4, 4);
+    grid-row: 2 / 4;
+    display: flex;
+}
+.two img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.two:active {
+    background-color: rgba(160, 4, 4, 0.13);
+}
+
+.three {
+    background-color: yellow;
+    grid-column: 4;
+    grid-row: 1 / 4;
+}
+.three img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* -webkit-box-reflect: left; */
+}
+/* .three:hover {
+    grid-column: 1 / 6;
+    grid-row: 1 / 5;
+    transition: 0.5s;
+} */
+
+.four {
+    background-color: darkmagenta;
+    grid-row: 4 / 4;
+    grid-column: 4 span;
+}
+.four img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.five {
+    grid-row: 2 / 4;
+}
+.five img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.six {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six img {
+    width: 65px;
+}
+.six {
+    background-color: rgba(31, 31, 31, 0.212);
+}
+
+.seven {
+    background-color: dodgerblue;
+    grid-row: 1 / 5;
+}
+.seven img {border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eigth {
+    background-color: lawngreen;
+    grid-row: 2 / 4;
+}
+.eigth img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-fade {
+    opacity: 0.1 !important;
+}
+
+/* .boxes .two:hover, .boxes .three:hover, .boxes .four:hover, .boxes .five:hover, .boxes .seven:hover, .boxes .eight:hover {
+    opacity: 1; 
+}
+
+.boxes:hover .box:not(:hover) {
+    opacity: 0; 
+} */
