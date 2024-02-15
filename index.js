@@ -1,16 +1,3 @@
-// const one = document.querySelector('.boxes .one');
-// const two = document.querySelector('.boxes .two');
-// const three = document.querySelector('.boxes .three');
-// const four = document.querySelector('.boxes .four');
-// const five = document.querySelector('.boxes .five');
-// const six = document.querySelector('.boxes .six');
-// const seven = document.querySelector('.boxes .seven');
-// const eigth = document.querySelector('.boxes .eigth');
-
-// one.addEventListener('click', () => {
-//     one.style.display = 'none';
-// })
-
 document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('.boxes .box'); // Selecciona todas las cajas
 
