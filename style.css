@@ -192,3 +192,12 @@
 .boxes:hover .box:not(:hover) {
     opacity: 0; 
 } */
+
+@media screen and (max-width: 425px) {
+    .content-one .boxes {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5px 5px;
+    }
+}
